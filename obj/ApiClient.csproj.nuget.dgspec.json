@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\uncha\\Desktop\\svendeprøveH5-vaskemaskine\\ApiClient\\ApiClient.csproj": {}
+    "D:\\projects\\H5SvendeProeve\\ApiClient\\ApiClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\uncha\\Desktop\\svendeprøveH5-vaskemaskine\\ApiClient\\ApiClient.csproj": {
+    "D:\\projects\\H5SvendeProeve\\ApiClient\\ApiClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\uncha\\Desktop\\svendeprøveH5-vaskemaskine\\ApiClient\\ApiClient.csproj",
+        "projectUniqueName": "D:\\projects\\H5SvendeProeve\\ApiClient\\ApiClient.csproj",
         "projectName": "ApiClient",
-        "projectPath": "C:\\Users\\uncha\\Desktop\\svendeprøveH5-vaskemaskine\\ApiClient\\ApiClient.csproj",
-        "packagesPath": "C:\\Users\\uncha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\uncha\\Desktop\\svendeprøveH5-vaskemaskine\\ApiClient\\obj\\",
+        "projectPath": "D:\\projects\\H5SvendeProeve\\ApiClient\\ApiClient.csproj",
+        "packagesPath": "C:\\Users\\mk\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\H5SvendeProeve\\ApiClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\uncha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.309\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

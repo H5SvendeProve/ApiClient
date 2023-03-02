@@ -8,7 +8,7 @@ END;
 
 
 CREATE TABLE ElectricityPrices (
-    DKKPerKwh FLOAT NOT NULL,
+    DKKPerKWh FLOAT NOT NULL,
     EURPerKWh FLOAT NOT NULL,
     Exr FLOAT NOT NULL,
     TimeStart DATETIME NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE ElectricityPrices (
 
 
 CREATE PROCEDURE InsertElectricityPrice
-    @DKKPerKwh FLOAT,
+    @DKKPerKWh FLOAT,
     @EURPerKWh FLOAT,
     @Exr FLOAT,
     @TimeStart DATETIME,
@@ -34,8 +34,8 @@ BEGIN
 
 	begin
 
-    INSERT INTO ElectricityPrices (DKKPerKwh, EURPerKWh, Exr, TimeStart, TimeEnd, Location)
-    VALUES (@DKKPerKwh, @EURPerKWh, @Exr, @TimeStart, @TimeEnd, @Location);
+    INSERT INTO ElectricityPrices (DKKPerKWh, EURPerKWh, Exr, TimeStart, TimeEnd, Location)
+    VALUES (@DKKPerKWh, @EURPerKWh, @Exr, @TimeStart, @TimeEnd, @Location);
 
 	end;
 END;

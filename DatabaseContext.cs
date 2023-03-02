@@ -11,6 +11,8 @@ public class DatabaseContext
 
     private const string DateFormat = "yyyy-MM-dd HH:mm:ss";
 
+    // Mathias comment
+
 
     public bool HasConnection()
     {
