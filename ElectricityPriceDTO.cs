@@ -5,11 +5,11 @@ using ApiClient;
 
 namespace ApiClient
 {
-    public class ElectricityPrice
+    public class ElectricityPriceDTO
     {
        
         [JsonPropertyName("DKK_per_kWh")]
-        public double DKKPerKwh { get; set; }
+        public double DKKPerKWh { get; set; }
         [JsonPropertyName("EUR_per_kWh")]
         public double EURPerKWh { get; set; }
         [JsonPropertyName("EXR")]

@@ -39,13 +39,13 @@ public class DatabaseContext
         return connected;
     }
 
-    public bool InsertElectricityPrices(List<ElectricityPrice> prices)
+    public bool InsertElectricityPrices(List<ElectricityPriceDTO> prices)
     {
        bool done = false;
 
         try
         {
-            foreach (ElectricityPrice price in prices)
+            foreach (ElectricityPriceDTO price in prices)
             {
                 done = InsertElectricityPrice(price);
             }
@@ -60,7 +60,7 @@ public class DatabaseContext
         return done;
     }
 
-    private bool InsertElectricityPrice(ElectricityPrice electricityPrice)
+    private bool InsertElectricityPrice(ElectricityPriceDTO electricityPrice)
     {
         using SqlConnection con = new SqlConnection(DbConnectionString);
 
@@ -74,7 +74,7 @@ public class DatabaseContext
                 CommandType = CommandType.StoredProcedure
             };
 
-            cmd.Parameters.Add(new SqlParameter("@DKKPerKwh", electricityPrice.DKKPerKwh));
+            cmd.Parameters.Add(new SqlParameter("@DKKPerKwh", electricityPrice.DKKPerKWh));
             cmd.Parameters.Add(new SqlParameter("@EURPerKWh", electricityPrice.EURPerKWh));
             cmd.Parameters.Add(new SqlParameter("@Exr", electricityPrice.Exr));
             cmd.Parameters.Add(new SqlParameter("@TimeStart", electricityPrice.TimeStart.ToString(DateFormat)));
@@ -102,14 +102,12 @@ public class DatabaseContext
         return inserted;
     }
 
-   
-    private ElectricityPrice GetFirstElectricityPrice(List<ElectricityPrice> prices)
+    private ElectricityPriceDTO GetFirstElectricityPrice(List<ElectricityPriceDTO> prices)
     {   
         return prices.FirstOrDefault();
     }
 
-    
-    public bool PricesAlreadyExists(List<ElectricityPrice> prices)
+    public bool PricesAlreadyExists(List<ElectricityPriceDTO> prices)
     {
         bool exists = false;
 
