@@ -1,7 +1,9 @@
-﻿public class FlowManager
+﻿namespace ApiClient;
+
+public class FlowManager
 {
-    private ApiHandler ApiHandler { get; set; }
-    private DatabaseContext DatabaseContext { get; set; }
+    private ApiHandler ApiHandler { get; }
+    private DatabaseContext DatabaseContext { get; }
 
     public FlowManager()
     {

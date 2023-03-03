@@ -1,7 +1,8 @@
-﻿using ApiClient;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+
+namespace ApiClient;
 
 public class DatabaseContext
 {
@@ -43,7 +44,7 @@ public class DatabaseContext
 
     public bool InsertElectricityPrices(List<ElectricityPriceDTO> prices)
     {
-       bool done = false;
+        bool done = false;
 
         try
         {

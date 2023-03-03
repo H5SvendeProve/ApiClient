@@ -1,5 +1,7 @@
 ﻿using System.Configuration;
 
+namespace ApiClient;
+
 public static class MyConfig
 {
     public static Dictionary<string, string> GetAllAppSettings()

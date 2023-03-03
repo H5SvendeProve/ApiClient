@@ -1,4 +1,6 @@
-﻿public class Client : IClient
+﻿namespace ApiClient;
+
+public class Client : IClient
 {
     public Client()
     {

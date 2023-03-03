@@ -1,16 +1,17 @@
-﻿using ApiClient;
-using System.Text.Json;
+﻿using System.Text.Json;
+
+namespace ApiClient;
 
 public class ApiHandler
 {
 
     //https://www.elprisenligenu.dk/api/v1/prices/2023/02-27_DK2.json
 
-    private readonly string WestDenmark = "_DK1.json";
+    private const string WestDenmark = "_DK1.json";
 
-    private readonly string EastDenmark = "_DK2.json";
+    private const string EastDenmark = "_DK2.json";
 
-    private IClient client;
+    private readonly IClient client;
 
     private static readonly Dictionary<string, string> AllConfigs = MyConfig.GetAllAppSettings();
 
@@ -19,7 +20,7 @@ public class ApiHandler
         client = new Client();
     }
 
-    private string BuildUrl(string url, Locations location)
+    private static string BuildUrl(string url, Locations location)
     {
         var dateNow = DateTime.Now;
 
@@ -42,8 +43,6 @@ public class ApiHandler
             case Locations.EastDenmark:
                 url = url + EastDenmark;
                 break;
-            default:
-                break;
         }
 
         return url;
@@ -53,9 +52,9 @@ public class ApiHandler
     {
         var url = AllConfigs["elprisenLigeNuUrl"];
 
-        if(url == null)
+        if (string.IsNullOrEmpty(url))
         {
-            return "";
+            throw new ArgumentException("url is missing in app.cofig key : elprisenLigeNuUrl");
         }
 
         url = BuildUrl(url, location);
